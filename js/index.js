@@ -28,20 +28,27 @@ navClose.addEventListener('click', () => {
 PopUp
 =============
  */
-// const popup = document.querySelector(".popup");
-// const closePopup = document.querySelector(".popup__close");
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
+const data = getWithExpiry('popupShown');
 
-// if (popup) {
-//   closePopup.addEventListener("click", () => {
-//     popup.classList.add("hide__popup");
-//   });
+if (!data) {
+  if (popup) {
+    closePopup.addEventListener('click', () => {
+      popup.classList.add('hide__popup');
+    });
 
-//   window.addEventListener("load", () => {
-//     setTimeout(() => {
-//       popup.classList.remove("hide__popup");
-//     }, 500);
-//   });
-// }
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        popup.classList.remove('hide__popup');
+      }, 500);
+    });
+  }
+
+  setWithExpiry('popupShown', 'true', 2 * 60 * 60 * 1000); // 2 hours in milliseconds
+  
+}
+
 function setWithExpiry(key, value, ttl) {
   const now = new Date();
   const item = {
@@ -72,54 +79,57 @@ function getWithExpiry(key) {
   return item.value; // Return the stored value if not expired
 }
 
-const popup = document.querySelector(".popup");
-// popups.forEach((popup) => {
-const closePopup = popup.querySelector('.popup__close');
+// const popup = document.querySelector(".popup");
 
-  if (popup) {
-    // Close the popup on button click
-    closePopup.addEventListener('click', () => {
-      popup.classList.add('hide__popup');
-      popup.setAttribute('aria-hidden', 'true');
-    });
-    const isPopupShown = 'false';
-    // Check if the popup has been shown before
-    const data = getWithExpiry('popupShown');
-    if (data) {
-      isPopupShown = 'true'; //localStorage.getItem('popupShown');
-      // console.log('Data:', data); // Data will be available if not expired
-    } else {
-      isPopupShown = 'false';
-      // console.log('Data has expired or does not exist.');
-    }
+// const closePopup = popup.querySelector('.popup__close');
 
-    //const isPopupShown = localStorage.getItem('popupShown');
+//   if (popup) {
+//     // Close the popup on button click
 
-    if (!isPopupShown) {
-      // Show the popup only on initial load
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          popup.classList.remove('hide__popup');
-          popup.setAttribute('aria-hidden', 'false');
+//     const isPopupShown = '';
+//     // Check if the popup has been shown before
+//     const data = getWithExpiry('popupShown');
+//     if (data) {
+//       isPopupShown = 'true'; //localStorage.getItem('popupShown');
+//       // console.log('Data:', data); // Data will be available if not expired
+//     } else {
 
-          // Mark the popup as shown in localStorage
+//        closePopup.addEventListener('click', () => {
+//          popup.classList.add('hide__popup');
+//          popup.setAttribute('aria-hidden', 'true');
+//        });
 
-          setWithExpiry('popupShown', 'true', 0.01 * 60 * 60 * 1000); // 2 hours in milliseconds
+//       isPopupShown = '';
+//       // console.log('Data has expired or does not exist.');
+//     }
 
-          //localStorage.setItem('popupShown', 'true');
-        }, 5);
-      });
-    }
+//     //const isPopupShown = localStorage.getItem('popupShown');
 
-    // Close the popup on Esc key press
-    // document.addEventListener('keydown', (e) => {
-    //   if (e.key === 'Escape') {
-    //     popup.classList.add('hide__popup');
-    //     popup.setAttribute('aria-hidden', 'true');
-    //   }
-    // });
-  }
-// });
+//     if (!isPopupShown) {
+//       // Show the popup only on initial load
+//       window.addEventListener('load', () => {
+//         setTimeout(() => {
+//           popup.classList.remove('hide__popup');
+//           popup.setAttribute('aria-hidden', 'false');
+
+//           // Mark the popup as shown in localStorage
+// // 2 * 60 * 60 * 1000
+//           setWithExpiry('popupShown', 'true',  1000); // 2 hours in milliseconds
+
+//           //localStorage.setItem('popupShown', 'true');
+//         }, 500);
+//       });
+//     }
+
+//     // Close the popup on Esc key press
+//     // document.addEventListener('keydown', (e) => {
+//     //   if (e.key === 'Escape') {
+//     //     popup.classList.add('hide__popup');
+//     //     popup.setAttribute('aria-hidden', 'true');
+//     //   }
+//     // });
+//   }
+// // });
 
 /*
 =============
