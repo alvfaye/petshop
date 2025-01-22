@@ -1,0 +1,368 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "title": "Goodest Beef & Liver Steak Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product1.jpg",
+      "price": 40.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 102,
+      "title": "Paleo Pet Pork Flavor Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product2.png",
+      "price": 265.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 103,
+      "title": "Paleo Pet Beef Flavor Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product3.png",
+      "price": 265.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 104,
+      "title": "Aozi Beef & Liver Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product4.png",
+      "price": 85.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 105,
+      "title": "Aozi Lamb Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product5.png",
+      "price": 85.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 106,
+      "title": "SmartHeart Beef & Vegetable Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product6.jpg",
+      "price": 93.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 107,
+      "title": "SmartHeart Lamb Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product7.jpg",
+      "price": 93.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 108,
+      "title": "JerHigh Grilled Chicken Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product8.jpg",
+      "price": 56.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 109,
+      "title": "JerHigh Roasted Duck Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product9.jpg",
+      "price": 56.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 110,
+      "title": "Pedigree Puppy Chicken Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product10.png",
+      "price": 45.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 111,
+      "title": "Pedigree Adult Beef Loaf Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product11.png",
+      "price": 41.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 112,
+      "title": "Goodest Braised Beef with Veggies Wet Dog Food",
+      "image": "./images/products/pets/foods/dogs/product12.jpg",
+      "price": 40.0,
+      "category": "Dog Food"
+    },
+    {
+      "id": 201,
+      "title": "Whiskas Tuna Dry Food",
+      "image": "./images/products/pets/foods/cats/product1.jpg",
+      "price": 350.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 202,
+      "title": "Me-O Seafood Dry Food",
+      "image": "./images/products/pets/foods/cats/product2.jpg",
+      "price": 270.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 203,
+      "title": "Friskies Indoor Delights Dry Food",
+      "image": "./images/products/pets/foods/cats/product3.jpg",
+      "price": 300.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 204,
+      "title": "Whiskas Ocean Fish Wet Food",
+      "image": "./images/products/pets/foods/cats/product4.jpg",
+      "price": 75.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 205,
+      "title": "Zoi Tuna Dry Food",
+      "image": "./images/products/pets/foods/cats/product5.jpg",
+      "price": 149.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 206,
+      "title": "SmartHeart Mackerel Dry Food",
+      "image": "./images/products/pets/foods/cats/product6.png",
+      "price": 305.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 207,
+      "title": "Refine Salmon Canned Wet Food",
+      "image": "./images/products/pets/foods/cats/product7.jpg",
+      "price": 70.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 208,
+      "title": "Aozi Salmon and Beef Wet Cat Food",
+      "image": "./images/products/pets/foods/cats/product8.jpg",
+      "price": 85.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 209,
+      "title": "Goodest Chicken Chomp Wet Cat Food",
+      "image": "./images/products/pets/foods/cats/product9.jpg",
+      "price": 34.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 210,
+      "title": "Special Cat  Beef & Liver Wet Food",
+      "image": "./images/products/pets/foods/cats/product10.jpg",
+      "price": 85.0,
+      "category": "Cat Food"
+    },
+    {
+      "id": 301,
+      "title": "LC-Vit Syrup Multivitamins Pets",
+      "image": "./images/products/pets/supplements/product1.png",
+      "price": 199,
+      "category": "Supplement"
+    },
+    {
+      "id": 302,
+      "title": "Doggy Doggy Syrup Performance Enhancer Pets",
+      "image": "./images/products/pets/supplements/product2.jpg",
+      "price": 119.75,
+      "category": "Supplement"
+    },
+    {
+      "id": 303,
+      "title": "Coat Shine Performance Enhancer Dogs",
+      "image": "./images/products/pets/supplements/product3.jpg",
+      "price": 399,
+      "category": "Supplement"
+    },
+    {
+      "id": 304,
+      "title": "Pet Logic Skin and Coat Health",
+      "image": "./images/products/pets/supplements/product4.png",
+      "price": 299,
+      "category": "Supplement"
+    },
+    {
+      "id": 305,
+      "title": "Nutrical Calcium Supplement in Syrup",
+      "image": "./images/products/pets/supplements/product5.jpg",
+      "price": 149,
+      "category": "Supplement"
+    },
+    {
+      "id": 306,
+      "title": "Iron Aid Pet Supplement",
+      "image": "./images/products/pets/supplements/product6.jpg",
+      "price": 329,
+      "category": "Supplement"
+    },
+    {
+      "id": 307,
+      "title": "Canicee Vitamin C Immune Booster Pets",
+      "image": "./images/products/pets/supplements/product7.jpg",
+      "price": 109,
+      "category": "Supplement"
+    },
+    {
+      "id": 308,
+      "title": "Pet-C Ascorbic Acid",
+      "image": "./images/products/pets/supplements/product8.png",
+      "price": 149,
+      "category": "Supplement"
+    },
+    {
+      "id": 309,
+      "title": "Drontal Plus Dog Dewormer",
+      "image": "./images/products/pets/supplements/product9.jpg",
+      "price": 169,
+      "category": "Supplement"
+    },
+    {
+      "id": 310,
+      "title": "Pur Paws Fedgrozyme Pet Supplement",
+      "image": "./images/products/pets/supplements/product10.jpg",
+      "price": 479,
+      "category": "Supplement"
+    },
+    {
+      "id": 401,
+      "title": "Pedigree Schmackos Smoky Beef",
+      "image": "./images/products/pets/treats/product1.png",
+      "price": 110,
+      "category": "Treat"
+    },
+    {
+      "id": 402,
+      "title": "Sleeky Chewy Snack Stick Lamb",
+      "image": "./images/products/pets/treats/product2.jpg",
+      "price": 158,
+      "category": "Treat"
+    },
+    {
+      "id": 403,
+      "title": "JerHigh Chicken Bacon",
+      "image": "./images/products/pets/treats/product3.png",
+      "price": 100,
+      "category": "Treat"
+    },
+    {
+      "id": 404,
+      "title": "Calcium Milky Biscuit Liver and Milk",
+      "image": "./images/products/pets/treats/product4.png",
+      "price": 169,
+      "category": "Treat"
+    },
+    {
+      "id": 405,
+      "title": "Kit Cat Kitty Crunch Beef",
+      "image": "./images/products/pets/treats/product5.png",
+      "price": 89,
+      "category": "Treat"
+    },
+    {
+      "id": 406,
+      "title": "SmartHeart Creamy Tuna",
+      "image": "./images/products/pets/treats/product6.jpg",
+      "price": 110,
+      "category": "Treat"
+    },
+    {
+      "id": 407,
+      "title": "Pedigree Tasty Bites Chewy Cubes Lamb",
+      "image": "./images/products/pets/treats/product7.jpg",
+      "price": 105,
+      "category": "Treat"
+    },
+    {
+      "id": 408,
+      "title": "Temptations Salmon",
+      "image": "./images/products/pets/treats/product8.png",
+      "price": 115,
+      "category": "Treat"
+    },
+    {
+      "id": 409,
+      "title": "Dentalight Dental Stix Chicken",
+      "image": "./images/products/pets/treats/product9.jpg",
+      "price": 149,
+      "category": "Treat"
+    },
+    {
+      "id": 410,
+      "title": "Dentalight Vital Fiber Puppy Vanilla",
+      "image": "./images/products/pets/treats/product10.jpg",
+      "price": 129,
+      "category": "Treat"
+    },
+    {
+      "id": 501,
+      "title": "Blue Paw Shape Dog Toy",
+      "image": "./images/products/pets/toys/product1.jpg",
+      "price": 170,
+      "category": "Toy"
+    },
+    {
+      "id": 502,
+      "title": "Gray Elephant Dog Toy",
+      "image": "./images/products/pets/toys/product2.jpg",
+      "price": 270,
+      "category": "Toy"
+    },
+    {
+      "id": 503,
+      "title": "Teether Bone with Spike Dog Toy",
+      "image": "./images/products/pets/toys/product3.png",
+      "price": 100,
+      "category": "Toy"
+    },
+    {
+      "id": 504,
+      "title": "Orange Spiky Ring Dog Toy",
+      "image": "./images/products/pets/toys/product4.png",
+      "price": 119,
+      "category": "Toy"
+    },
+    {
+      "id": 505,
+      "title": "Happy Birthday Cake Dog Toy",
+      "image": "./images/products/pets/toys/product5.png",
+      "price": 189,
+      "category": "Toy"
+    },
+    {
+      "id": 506,
+      "title": "Pink Fox Dog Toy",
+      "image": "./images/products/pets/toys/product6.png",
+      "price": 329,
+      "category": "Toy"
+    },
+    {
+      "id": 507,
+      "title": "Cool Camouflage Pet Mat",
+      "image": "./images/products/pets/toys/product7.jpg",
+      "price": 349,
+      "category": "Toy"
+    },
+    {
+      "id": 508,
+      "title": "Round Animal Whale Pet Bed",
+      "image": "./images/products/pets/toys/product8.png",
+      "price": 699,
+      "category": "Toy"
+    },
+    {
+      "id": 509,
+      "title": "Round Fruit Strawberry Pet Bed",
+      "image": "./images/products/pets/toys/product9.png",
+      "price": 699,
+      "category": "Toy"
+    },
+    {
+      "id": 510,
+      "title": "Green Ball Dog Toy",
+      "image": "./images/products/pets/toys/product10.png",
+      "price": 149,
+      "category": "Toy"
+    }
+  ]
+}
