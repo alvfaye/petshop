@@ -13,8 +13,9 @@
 
   <!-- Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
-">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css" integrity="sha512-Cn5/xnOLSKjVpNCsJZCtgQhxp00FcFnlRwgbSG7WGFq1BVvyG+LoOarjXAq//8Vstyu0Na9wvEKLWR67/wAy3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" integrity="sha512-wYsVD8ho6rJOAo1Xf92gguhOGQ+aWgxuyKydjyEax4bnuEmHUt6VGwgpUqN8VlB4w50d0nt+ZL+3pgaFMAmdNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
@@ -77,11 +78,11 @@
               </svg>
             </a>
 
-            <a href="#" class="icon__item" id="search-btn">
+            <!-- <a href="#" class="icon__item" id="search-btn">
               <svg class="icon__search">
                 <use xlink:href="./images/sprite.svg#icon-search"></use>
               </svg>
-            </a>
+            </a> -->
 
             <a href="#" class="icon__item" id="cart-btn">
               <svg class="icon__cart">
@@ -102,7 +103,7 @@
             <li class="glide__slide">
               <div class="hero__center">
                 <div class="hero__left">
-                  <span class="">Dogs & Cats</span>
+                  <span class="">Wide Variety of Products for Your Pet Care Needs</span>
                   <h1 class="">PET SUPPLIES & ACCESSORIES</h1>
                   <p>Explore a wide range of pet supplies, accessories and premium pet food</p>
                   <a href="#category"><button class="hero__btn">SHOP NOW</button></a>
@@ -117,7 +118,7 @@
             <li class="glide__slide">
               <div class="hero__center">
                 <div class="hero__left">
-                  <span>Trusted Brands</span>
+                  <span>Most Trusted Brands</span>
                   <h1>YOUR PETS DESERVE THE BEST!</h1>
                   <p>Shop products from the most trusted and loved brands by pet owners</p>
                   <a href="#category"><button class="hero__btn">SHOP NOW</button></a>
@@ -132,7 +133,7 @@
             <li class="glide__slide">
               <div class="hero__center">
                 <div class="hero__left">
-                  <span>Pet Supplies and Accessories</span>
+                  <span>Get Discounts All Year Round</span>
                   <h1>FREE GIFT WITH DOG & CAT PURCHASES</h1>
                   <p>Do not miss out on big discounts, offers and coupons!</p>
                   <a href="#category"><button class="hero__btn">SHOP NOW</button></a>
@@ -175,71 +176,25 @@
         <input type="submit" value="Login now" class="btn">
       </form>
       </div>
-      <!-- <div class="searchF">
-      <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="Search here..">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-  </div> -->
 
-<!-- In your index.html, replace the existing searchF div with this -->
-<!-- <div class="searchF">
-    <div class="search-form">
-        <input type="text" id="search-box" placeholder="Search for products...">
-        <button type="button" class="search-close">
-            <svg>
-                <use xlink:href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </button>
-        <div class="search-results"></div>
-    </div>
-</div> -->
+ 
 
+<!-- Search Form Container -->
 <div class="searchF">
-    <div class="search-form">
-        <input type="text" id="search-box" placeholder="Search for products...">
-        <div class="search-results"></div>
-        <button type="button" class="search-close">
-            <svg>
-                <use xlink:href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </button>
+  <div class="search-form">
+    <input type="text" id="search-box" placeholder="Search for products...">
+    <!-- <div class="filter-btn" data-id="Search Button"></div> -->
+    <div class="filter-btn" id="searchC" data-id="Search Button">
+        <h1 class="search-btn">Search</h1>
     </div>
+    <button type="button" class="search-close" id="close-search-popup">
+      <!-- <button> -->
+      <svg>
+        <use xlink:href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+  </div>
 </div>
-
-
-    <!-- <div class="shopping-cart">
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/pets/foods/cats/product1.jpg">
-            <div class="content">
-                <h3>iPhone</h3>
-                <span class="price">₱800.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/pets/supplements/product2.jpg">
-            <div class="content">
-                <h3>Samsung A22</h3>
-                <span class="price">₱350.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/pets/toys/product4.png">
-            <div class="content">
-                <h3>Boat</h3>
-                <span class="price">₱54.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="total">Total : ₱1354.69/-</div>
-        <a href="#" class="btn">Check out</a>
-    </div> -->
-
   </header>
   <!-- End Header -->
 
@@ -316,29 +271,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+  
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -370,29 +303,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -424,29 +335,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -478,29 +367,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -532,29 +399,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -586,29 +431,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -640,29 +463,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -694,29 +495,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
                 <li class="glide__slide">
@@ -748,29 +527,7 @@
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
+
                   </div>
                 </li>
               </ul>
@@ -822,14 +579,14 @@
               </div>
             </div>
 
-                        <div class="section__titles">
+            <div class="section__titles">
               <div class="section__title filter-btn" data-id="Treat">
                 <span class="dot"></span>
                 <h1 class="primary__title">Treats</h1>
               </div>
             </div>
 
-                        <div class="section__titles">
+            <div class="section__titles">
               <div class="section__title filter-btn" data-id="Toy">
                 <span class="dot"></span>
                 <h1 class="primary__title">Toys</h1>
@@ -1070,30 +827,16 @@
   <footer id="footer" class="section footer">
     <div class="container">
       <div class="footer__top">
-        <div class="footer-top__box">
-          <h3>EXTRAS</h3>
-          <a href="#">Brands</a>
-          <a href="#">Gift Certificates</a>
-          <a href="#">Affiliate</a>
-          <a href="#">Specials</a>
-          <a href="#">Site Map</a>
-        </div>
+
         <div class="footer-top__box">
           <h3>INFORMATION</h3>
           <a href="/about.html">About Us</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms & Conditions</a>
           <a href="/faq.html">FAQ</a>
-          <a href="#">Site Map</a>
+          <!-- <a href="#">Site Map</a> -->
         </div>
-        <div class="footer-top__box">
-          <h3>MY ACCOUNT</h3>
-          <a href="#">My Account</a>
-          <a href="#">Order History</a>
-          <a href="#">Wish List</a>
-          <a href="#">Newsletter</a>
-          <a href="#">Returns</a>
-        </div>
+
         <div class="footer-top__box">
           <h3>CONTACT US</h3>
           <div>
@@ -1178,22 +921,7 @@
     </svg>
   </a>
 
-<!-- <script>
-  window.onload = function() {
-    // Check if the popup has been shown in this session
-    if (!sessionStorage.getItem('popupShown')) {
-        // Show the popup
-        document.getElementById('popup_newsletter').style.display = 'block';
 
-        // Set the flag in session storage
-        sessionStorage.setItem('popupShown', 'true');
-    }
-
-    // Close button functionality
-    document.getElementById('closePopup').onclick = function() {
-        document.getElementById('popup_newsletter').style.display = 'none';
-    };
-};
 
 </script> -->
   <!-- Glide Carousel Script -->
@@ -1202,8 +930,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Custom JavaScript -->
-  <script src="./js/products.js"></script>
+  
   <script src="./js/index.js"></script>
+  <script src="./js/products.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/auth-cart.js"></script>
   <script src="./js/search.js"></script>

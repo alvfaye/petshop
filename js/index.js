@@ -45,8 +45,7 @@ if (!data) {
     });
   }
 
-  setWithExpiry('popupShown', 'true', 2 * 60 * 60 * 1000); // 2 hours in milliseconds
-  
+  setWithExpiry('popupShown', 'true', 1000); // 2 * 60 * 60 * 1000 ----- 2 hours in milliseconds
 }
 
 function setWithExpiry(key, value, ttl) {
@@ -184,24 +183,25 @@ window.addEventListener('scroll', (e) => {
 });
 
 let login = document.querySelector('.login-form');
+let shoppingCart = document.querySelector('.shopping-cart');
 
 document.querySelector('#login-btn').onclick = () => {
   login.classList.toggle('active');
   searchForm.classList.remove('active');
-  shoppingCart.classList.remove('active');
+  shoppingCart ? shoppingCart.classList.remove('active') : null;
 };
 
-let shoppingCart = document.querySelector('.shopping-cart');
-
 document.querySelector('#cart-btn').onclick = () => {
-  shoppingCart.classList.toggle('active');
+  shoppingCart ? shoppingCart.classList.toggle('active') : null;
   searchForm.classList.remove('active');
   login.classList.remove('active');
 };
+
 let searchForm = document.querySelector('.search-form');
 
 document.querySelector('#search-btn').onclick = () => {
   searchForm.classList.toggle('active');
-  shoppingCart.classList.remove('active');
+  shoppingCart ? shoppingCart.classList.remove('active') : null;
   login.classList.remove('active');
+  // console.log('searchForm');
 };

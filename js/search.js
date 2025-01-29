@@ -1,81 +1,131 @@
-// Get DOM elements
-const searchForm = document.querySelector('.search-form');
-const searchBox = document.getElementById('search-box');
-const searchResults = document.querySelector('.search-results');
-const searchBtn = document.getElementById('search-btn');
-const searchClose = document.querySelector('.search-close');
+// search.js
 
-// Show search form when search icon is clicked
-searchBtn.addEventListener('click', () => {
-  document.querySelector('.searchF').classList.add('active');
-  searchBox.focus();
-});
+document.addEventListener('DOMContentLoaded', function () {
+  const searchBox = document.getElementById('search-box');
+  const searchResults = document.querySelector('.search-results');
+  const searchForm = document.querySelector('.searchF');
+  const closeSearchPopup = document.getElementById('close-search-popup');
+  //const searchBtn = document.getElementById('search-btn');
+  const searchBtn = document.getElementById('searchC');
 
-// Hide search form when close button is clicked
-searchClose.addEventListener('click', () => {
-  document.querySelector('.searchF').classList.remove('active');
-  searchBox.value = '';
-  searchResults.innerHTML = '';
-});
+  // Sample product data (replace with your actual product data)
+  const products = [
+    {
+      name: 'Whiskas Tuna Dry Food',
+      category: 'Cat Food',
+      price: '₱350',
+      image: '/images/products/pets/foods/cats/product1.jpg',
+    },
+    {
+      name: 'Nutrical Calcium Supplement in Syrup',
+      category: 'Supplement',
+      price: '₱149',
+      image: '/images/products/pets/supplements/product5.jpg',
+    },
+    {
+      name: 'Goodest Braised Beef with Veggies Wet Dog Food',
+      category: 'Dog Food',
+      price: '₱40',
+      image: '/images/products/pets/foods/dogs/product12.jpg',
+    },
+    {
+      name: 'Gray Elephant Dog Toy',
+      category: 'Toy',
+      price: '₱270',
+      image: '/images/products/pets/toys/product2.jpg',
+    },
+    {
+      name: 'Refine Salmon Canned Wet Food',
+      category: 'Cat Food',
+      price: '₱70',
+      image: './images/products/pets/foods/cats/product7.jpg',
+    },
+    {
+      name: 'Paleo Pet Beef Flavor Wet Dog Food',
+      category: 'Dog Food',
+      price: '₱265',
+      image: 'images/products/pets/foods/dogs/product3.png',
+    },
+    {
+      name: 'Pink Fox Dog Toy',
+      category: 'Toy',
+      price: '₱329',
+      image: 'images/products/pets/toys/product6.png',
+    },
+    {
+      name: 'Whiskas Ocean Fish Wet Food',
+      category: 'Cat Food',
+      price: '₱75',
+      image: 'images/products/pets/foods/cats/product4.jpg',
+    },
+    {
+      name: 'Pedigree Puppy Chicken Wet Dog Food',
+      category: 'Dog Food',
+      price: '₱45',
+      image: 'images/products/pets/foods/dogs/product10.png',
+    },
+  ];
 
-// Function to filter products based on search term
-function filterProducts(searchTerm) {
-  return products.filter((product) => {
-    const productName = product.name.toLowerCase();
-    const productCategory = product.category.toLowerCase();
-    const searchLower = searchTerm.toLowerCase();
-
-    return (
-      productName.includes(searchLower) || productCategory.includes(searchLower)
+  // Function to filter products based on search term
+  function filterProducts(searchTerm) {
+    return products.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  });
-}
-
-// Function to display search results
-function displaySearchResults(results) {
-  searchResults.innerHTML = '';
-
-  if (results.length === 0) {
-    searchResults.innerHTML = '<div class="no-results">No products found</div>';
-    return;
   }
 
-  const resultsHtml = results
-    .map(
-      (product) => `
-        <div class="search-result-item">
-            <img src="${product.image}" alt="${product.name}">
-            <div class="search-result-details">
-                <h4>${product.name}</h4>
-                <p class="price">₱${product.price}</p>
-            </div>
-        </div>
-    `
-    )
-    .join('');
-
-  searchResults.innerHTML = resultsHtml;
-}
-
-// Handle search input
-searchBox.addEventListener('input', (e) => {
-  const searchTerm = e.target.value.trim();
-
-  if (searchTerm.length < 2) {
+  // Function to display search results
+  function displayResults(results) {
     searchResults.innerHTML = '';
-    return;
+    if (results.length > 0) {
+      results.forEach((product) => {
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" width="50">
+          <span>${product.name} - ${product.price}</span>
+        `;
+        resultItem.addEventListener('click', () => {
+          // Redirect to product page or perform other actions
+          alert(`You clicked on ${product.name}`);
+        });
+        searchResults.appendChild(resultItem);
+      });
+    } else {
+      searchResults.innerHTML = '<div>No products found</div>';
+    }
   }
 
-  const filteredProducts = filterProducts(searchTerm);
-  displaySearchResults(filteredProducts);
-});
+  // Event listener for search input
+  searchBox.addEventListener('input', function () {
+    const searchTerm = searchBox.value.trim();
+    if (searchTerm.length > 0) {
+      const results = filterProducts(searchTerm);
+      console.log("results filtered products.........",results)
+      displayResults(results);
+    } else {
+      searchResults.innerHTML = '';
+    }
+  });
 
-// Handle clicking on search result items
-searchResults.addEventListener('click', (e) => {
-  const resultItem = e.target.closest('.search-result-item');
-  if (resultItem) {
-    // You can add functionality here to navigate to the product page
-    // or add the product to the cart
-    console.log('Product clicked:', resultItem.querySelector('h4').textContent);
-  }
+  // Show search form when search button is clicked
+  searchBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    searchForm.style.display = 'flex';
+    console.log('inside event listener for searchBtn....')
+  });
+
+  // Close search form when close button is clicked
+  closeSearchPopup.addEventListener('click', function () {
+    searchForm.style.display = 'none';
+    searchBox.value = '';
+    searchResults.innerHTML = '';
+  });
+
+  // Close search form when clicking outside of it
+  window.addEventListener('click', function (e) {
+    if (e.target === searchForm) {
+      searchForm.style.display = 'none';
+      searchBox.value = '';
+      searchResults.innerHTML = '';
+    }
+  });
 });

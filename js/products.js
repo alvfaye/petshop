@@ -1,14 +1,23 @@
-const getProducts = async () => {
+// const getProducts = async () => {
+//   try {
+//     const results = await fetch('./data/products.json');
+//     const data = await results.json();
+//     const products = data.products;
+//     return products;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+const getProducts = async() => {
   try {
-    const results = await fetch('./data/products.json');
-    const data = await results.json();
+    const response = await fetch('./data/products.json');
+    const data = await response.json();
     const products = data.products;
     return products;
   } catch (err) {
     console.log(err);
   }
 };
-
 /*
 =============
 Load Category Products
@@ -52,29 +61,7 @@ const displayProductItems = (items) => {
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
-                  <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                  </ul>
+
                   </div>
                   `
   );
@@ -123,6 +110,39 @@ if (categoryContainer) {
       }
     }
   });
+}
+
+/** 
+================================
+Filter According to Search Term
+================================
+*/
+const searchContainer = document.getElementById('searchC');
+console.log('searchContainer ', searchContainer);
+if (searchContainer) {
+  console.log('inside search container cond....')
+
+  searchContainer.addEventListener('click', (e) => {
+
+    const products = getProducts();
+    const searchTerm = 'whiskas';
+
+    getProducts().then((products) => {
+      console.log('full list of products.........', products)
+      function filterProducts(searchTerm) {
+        return products.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+    }).catch((error)=>console.log(error));
+
+      let foundItems = filterProducts(searchTerm);
+      console.log('found items....', foundItems);
+      displayProductItems(foundItems);
+
+  });
+} else {
+  console.log('searchContainer not found!');
 }
 
 /*
