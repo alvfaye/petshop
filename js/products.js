@@ -1,14 +1,4 @@
-// const getProducts = async () => {
-//   try {
-//     const results = await fetch('./data/products.json');
-//     const data = await results.json();
-//     const products = data.products;
-//     return products;
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-const getProducts = async() => {
+const getProducts = async () => {
   try {
     const response = await fetch('./data/products.json');
     const data = await response.json();
@@ -18,6 +8,7 @@ const getProducts = async() => {
     console.log(err);
   }
 };
+
 /*
 =============
 Load Category Products
@@ -26,6 +17,7 @@ Load Category Products
 const categoryCenter = document.querySelector('.category__center');
 
 window.addEventListener('DOMContentLoaded', async function () {
+  // initAuth();
   const products = await getProducts();
   displayProductItems(products);
 });
@@ -118,28 +110,25 @@ Filter According to Search Term
 ================================
 */
 const searchContainer = document.getElementById('searchC');
-console.log('searchContainer ', searchContainer);
+
 if (searchContainer) {
-  console.log('inside search container cond....')
-
   searchContainer.addEventListener('click', (e) => {
-
     const products = getProducts();
     const searchTerm = 'whiskas';
 
-    getProducts().then((products) => {
-      console.log('full list of products.........', products)
-      function filterProducts(searchTerm) {
-        return products.filter((product) =>
-          product.name.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-      }
-    }).catch((error)=>console.log(error));
+    getProducts()
+      .then((products) => {
+        function filterProducts(searchTerm) {
+          return products.filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+      })
+      .catch((error) => console.log(error));
 
-      let foundItems = filterProducts(searchTerm);
-      console.log('found items....', foundItems);
-      displayProductItems(foundItems);
+    let foundItems = filterProducts(searchTerm);
 
+    displayProductItems(foundItems);
   });
 } else {
   console.log('searchContainer not found!');

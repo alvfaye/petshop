@@ -1,8 +1,5 @@
 const getProductsForSearch = async () => {
   try {
-    // const results = fetch('./data/products.json');
-    // results.then(response=>response.json).then(data=>console.log(data));
-    // console.log('DATA......', data);
     let results;
     await fetch('./data/products.json') // Adjust the path as necessary
       .then((response) => {
@@ -12,18 +9,10 @@ const getProductsForSearch = async () => {
         return response.json();
       })
       .then((data) => {
-        // results = data
-        // return data;
-        // const products = data;
-        
-        // console.log('iS IT you DATA products.?....', products); // Log the data for debugging
-        // // displayData(data); // Call function to display data
-        
-        console.log('products....',data.products)
+        console.log('products....', data.products);
         return data.products;
       })
       .catch((error) => console.error('Unable to fetch data:', error));
-    
   } catch (err) {
     console.log(err);
   }
