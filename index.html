@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <title>VickyRey Pet & Poultry Supply</title>
+
 </head>
 
 <body>
@@ -78,11 +79,11 @@
               </svg>
             </a>
 
-            <!-- <a href="#" class="icon__item" id="search-btn">
+            <a href="#" class="icon__item" id="search-btn">
               <svg class="icon__search">
                 <use xlink:href="./images/sprite.svg#icon-search"></use>
               </svg>
-            </a> -->
+            </a>
 
             <a href="#" class="icon__item" id="cart-btn">
               <svg class="icon__cart">
@@ -813,7 +814,7 @@
           </div>
           <form action="#">
             <input type="email" placeholder="Enter your email address" class="newsletter__email">
-            <a class="newsletter__link" href="#" onclick="alert(`thank you for subscribing!\nwe'll send you newsletters to keep you informed.`)">subscribe</a>
+            <a class="newsletter__link" href="#" onclick="alert(`Thank you for subscribing!\nWe will send you newsletters to keep you informed.`)">subscribe</a>
           </form>
         </div>
       </div>
@@ -887,7 +888,36 @@
   <!-- End Footer -->
 
   <!-- PopUp -->
-  <div id="popup_newsletter" class="popup hide__popup">
+  
+  <!-- <div id="popup_newsletter" class="popup hide__popup"> -->
+  <!-- <div id="popup_newsletter" class="popup hide__popup">
+    <div class="popup__content">
+      <div class="popup__close" onclick="alert('Thank you for subscribing!');">
+        <svg>
+          <use xlink:href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </div>
+      <div class="popup__left">
+        <div class="popup-img__container">
+          <img class="popup__img" src="./images/banners/popup.jpg" alt="popup">
+        </div>
+      </div>
+      <div class="popup__right">
+        <div class="right__content">
+          <h1>Get Discount <span>30%</span> Off</h1>
+          <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
+          </p>
+          <form action="#">
+            <input type="email" placeholder="Enter your email..." class="popup__form">
+            <a href="#" onclick="alert(`thank you for subscribing!\nwe'll send you newsletters to keep you informed.`)">Subscribe</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+   <!-- PopUp -->
+  <div id="myPopup" class="popup hide__popup">
     <div class="popup__content">
       <div class="popup__close">
         <svg>
@@ -906,7 +936,7 @@
           </p>
           <form action="#">
             <input type="email" placeholder="Enter your email..." class="popup__form">
-            <a href="#">Subscribe</a>
+            <a href="#" onclick="alert('Thank you for subscribing!\nWe will send you newsletters to keep you informed.'); document.getElementById('myPopup').style.display='none';">Subscribe</a>
           </form>
         </div>
       </div>
@@ -923,7 +953,7 @@
 
 
 
-</script> -->
+</scrip> -->
   <!-- Glide Carousel Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
   <!-- Animate On Scroll -->

@@ -30,53 +30,79 @@ PopUp
  */
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__close');
-const data = getWithExpiry('popupShown');
 
-if (!data) {
-  if (popup) {
-    closePopup.addEventListener('click', () => {
-      popup.classList.add('hide__popup');
-    });
+if (popup) {
+  closePopup.addEventListener('click', () => {
+    popup.classList.add('hide__popup');
+  });
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        popup.classList.remove('hide__popup');
-      }, 500);
-    });
-  }
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      popup.classList.remove('hide__popup');
+    }, 500);
+  });
 
-  setWithExpiry('popupShown', 'true', 1000); // 2 * 60 * 60 * 1000 ----- 2 hours in milliseconds
 }
-
-function setWithExpiry(key, value, ttl) {
-  const now = new Date();
-  const item = {
-    value: value,
-    expiry: now.getTime() + ttl, // Set the expiry time
-  };
-  localStorage.setItem(key, JSON.stringify(item));
-}
-
-function getWithExpiry(key) {
-  const itemStr = localStorage.getItem(key);
-
-  // If the item doesn't exist, return null
-  if (!itemStr) {
-    return null;
+window.onclick = function (event) {
+  if (event.target == popup) {
+    popup.style.display = 'none';
   }
+};
 
-  const item = JSON.parse(itemStr);
-  const now = new Date();
+// /*
+// =============
+// PopUp
+// =============
+//  */
+// const popup = document.querySelector('.popup');
+// const closePopup = document.querySelector('.popup__close');
+// const data = getWithExpiry('popupShown');
 
-  // Check if the current time is greater than the expiry time
-  if (now.getTime() > item.expiry) {
-    // If expired, remove the item from storage
-    localStorage.removeItem(key);
-    return null;
-  }
+// if (!data) {
+//   if (popup) {
+//     closePopup.addEventListener('click', () => {
+//       popup.classList.add('hide__popup');
+//     });
 
-  return item.value; // Return the stored value if not expired
-}
+//     window.addEventListener('load', () => {
+//       setTimeout(() => {
+//         popup.classList.remove('hide__popup');
+//       }, 500);
+//     });
+//   }
+
+//   setWithExpiry('popupShown', 'true', 1000); // 2 * 60 * 60 * 1000 ----- 2 hours in milliseconds
+// }
+
+// function setWithExpiry(key, value, ttl) {
+//   const now = new Date();
+//   const item = {
+//     value: value,
+//     expiry: now.getTime() + ttl, // Set the expiry time
+//   };
+//   localStorage.setItem(key, JSON.stringify(item));
+// }
+
+// function getWithExpiry(key) {
+//   const itemStr = localStorage.getItem(key);
+
+//   // If the item doesn't exist, return null
+//   if (!itemStr) {
+//     return null;
+//   }
+
+//   const item = JSON.parse(itemStr);
+//   const now = new Date();
+
+//   // Check if the current time is greater than the expiry time
+//   if (now.getTime() > item.expiry) {
+//     // If expired, remove the item from storage
+//     localStorage.removeItem(key);
+//     return null;
+//   }
+
+//   return item.value; // Return the stored value if not expired
+// }
 
 // const popup = document.querySelector(".popup");
 
