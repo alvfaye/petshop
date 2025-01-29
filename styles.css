@@ -636,6 +636,7 @@ Collection Media Query
   .collection {
     margin: 0;
     position: relative;
+    
   }
 
   .collection__container {
@@ -644,11 +645,13 @@ Collection Media Query
     text-align: center;
     flex-direction: column;
     justify-content: space-around;
+    
   }
 
   .collection__box {
     justify-content: space-around;
     height: 15rem;
+    overflow: hidden;
   }
 
   .collection__content {
