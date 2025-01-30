@@ -4,6 +4,7 @@
 const users = [
   { email: 'test@email.com', password: 'password123' },
   { email: 'user@email.com', password: 'password456' },
+  { email: 'iskolarngbayan@email.com', password: 'PUPQC' },
 ];
 
 function initAuth() {
